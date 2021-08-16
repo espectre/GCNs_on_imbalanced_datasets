@@ -1,0 +1,4 @@
+utils/__pycache__/
+*.pyc
+params
+image
