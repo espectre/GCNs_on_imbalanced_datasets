@@ -46,15 +46,12 @@ def ohem3(crit, pred, labels):
     n_pos = torch.sum(pos_weight)
 
     n_neg = torch.sum(1-pos_weight)
+    
     # 防止选择数量超过negative sample的个数
-    # print("n_pos: ", n_pos)
-    # print("n_neg: ", n_neg)
     n_selected = torch.min(n_pos * 3, n_neg)
+    
     # 防止出现什么也没选
-    # print(n_selected)
-    # print(type(n_selected))
     n_selected = torch.max(n_selected, torch.FloatTensor([1]).cuda())
-    # print('n_selected: ', n_selected)
     neg_mask = torch.eq(labels, 0)
     hardness = torch.where(neg_mask, ce_loss, torch.zeros_like(ce_loss))
     vals, idxs = torch.topk(hardness, n_selected.int().item())
