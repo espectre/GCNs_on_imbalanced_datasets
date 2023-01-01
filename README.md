@@ -1,5 +1,7 @@
 # GCNs_on_imbalanced_datasets
-This repo provides the code for our IJCAIW'21 oral paper: [GCN-Based Linkage Prediction for Face Clustering on Imbalanced Datasets: An Empirical Study](https://arxiv.org/abs/2107.02477), by Huafeng Yang , Xingjian Chen , Fangyi Zhang∗ , Guangyue Hei , Yunjie Wang and Rong Du.
+
+This repo provides the code for our SDM'23 paper: [A Linkage-based Doubly Imbalanced Graph Learning Framework for Face Clustering
+](https://arxiv.org/abs/2107.02477), by Huafeng Yang, Qijie Shen, Xingjian Chen, Fangyi Zhang and Rong Du.
 
 Due to work changes and differences in the company's internal and external network code systems, if there are any problems, please submit an issue.
 
